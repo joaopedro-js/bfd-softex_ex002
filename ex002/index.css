@@ -2,15 +2,23 @@
 * { box-sizing: border-box; }
 .page-title {
   position: absolute;
-  top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 10px;
+  left: 10%;
+  transform: translateX(-10%);
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem; /* aumentei o tamanho */
   font-weight: 700;
   color: #fff;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   z-index: 10;
+}
+
+.page-title mark {
+  background-color: #ffcc00; /* cor de fundo do mark */
+  color: #000;               /* cor do texto dentro do mark */
+  padding: 0.2em 0.4em;       /* espaçamento interno */
+  border-radius: 8px;         /* cantos arredondados */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* sombra suave */
 }
 body {
   background-color: rgba(218, 204, 13, 0.555);
@@ -61,3 +69,4 @@ body {
   .panel:nth-of-type(5) { display: none; }
 
 }
+
