@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+* { box-sizing: border-box; }
+body {
+  background-color: rgba(218, 204, 13, 0.555);
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container { display: flex; width: 90vw; }
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.panel h3 {
+  font-size: 80px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+.panel.active { flex: 5; }
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 480px) {
+  .container { width: 100vw; }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) { display: none; }
+}
